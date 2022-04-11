@@ -1,0 +1,14 @@
+Flask==2.0.1
+Flask-WTF==0.15.1
+WTForms==2.3.3
+torch
+torchvision
+Pillow==7.1.2
+pathlib==1.0.1
+pylint
+click
+pytest
+pandas
+numpy
+sklearn
+scipy
