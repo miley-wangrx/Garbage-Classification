@@ -14,7 +14,7 @@ from PIL import Image
 from pathlib import Path
 from torchvision.datasets import ImageFolder
 import torchvision.transforms as transforms
-
+from ResNet import ResNet
 
 
 # from google.colab import drive
@@ -27,24 +27,30 @@ import torchvision.transforms as transforms
 
 # data_path = "drive/MyDrive/Colab Notebooks/garbagecollection/Garbage classification"
 
-class ResNet(nn.Module):
-    def __init__(self):
-        super().__init__()
-        # Use a pretrained model
-        self.network = models.resnet50(pretrained=True)
-        # Replace last layer
-        num_ftrs = self.network.fc.in_features
-        self.network.fc = nn.Linear(num_ftrs, 6)
+# class ResNet(nn.Module):
+#     def __init__(self):
+#         super().__init__()
+#         # Use a pretrained model
+#         self.network = models.resnet50(pretrained=True)
+#         # Replace last layer
+#         num_ftrs = self.network.fc.in_features
+#         self.network.fc = nn.Linear(num_ftrs, 6)
     
-    def forward(self, xb):
-        return torch.sigmoid(self.network(xb))
+#     def forward(self, xb):
+#         return torch.sigmoid(self.network(xb))
+
+
 
 def get_default_device_and_load(model_path):
     model = ResNet()
-    if torch.cuda.is_available():
-        model = torch.load(model_path)
-    else:
-        model = torch.load(model_path, map_location=torch.device('cpu'))
+    #model.load_state_dict(torch.load('model_weights.pth'))
+    # if torch.cuda.is_available():
+    #     model.load_state_dict(torch.load('model_weights.pth'))
+    # else:
+    #     model.load_state_dict(torch.load('model_weights.pth'), map_location=torch.device('cpu'))
+    device = torch.device('cpu')
+    model.load_state_dict(torch.load('model_weights.pth',map_location='cpu'))
+    #model = torch.load('model01.pt',map_location='cpu')
     return model
 
 def process_data(data_path):
@@ -54,6 +60,7 @@ def process_data(data_path):
     return dataset
 
 def predict_image(img, model, dataset):
+    
     def get_default_device():
       if torch.cuda.is_available():
           return torch.device('cuda')
@@ -72,7 +79,7 @@ def predict_image(img, model, dataset):
     # Pick index with highest probability
     prob, preds  = torch.max(yb, dim=1)
     # Retrieve the class label
-    print(dataset.classes[preds[0].item()])
+    #print(dataset.classes[preds[0].item()])
     return dataset.classes[preds[0].item()]
 
 def make_prediction(model,dataset, image_path:str):
@@ -85,5 +92,5 @@ def make_prediction(model,dataset, image_path:str):
 def run(image_path, model_path, data_path):
     dataset = process_data(data_path)
     model = get_default_device_and_load(model_path)
-    return make_prediction(model, dataset, image_path)
-
+    result =  make_prediction(model, dataset, image_path)
+    return result

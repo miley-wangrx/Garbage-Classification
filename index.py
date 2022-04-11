@@ -18,6 +18,7 @@ def index():
         tmp_filepath = f"./tmp/garbage.jpg"
         file.save(tmp_filepath)
         result = algorithm.run(tmp_filepath, './model01.pt', './Garbage classification')
+        print("In index.py", result)
         return render_template('result.html', title='Recognition result', result=result)
     return render_template('index.html', title='Recognize garbage', form=form)
 
