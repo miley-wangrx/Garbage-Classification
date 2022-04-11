@@ -34,12 +34,13 @@ class ResNet(nn.Module):
         self.network = models.resnet50(pretrained=True)
         # Replace last layer
         num_ftrs = self.network.fc.in_features
-        self.network.fc = nn.Linear(num_ftrs, len(dataset.classes))
+        self.network.fc = nn.Linear(num_ftrs, 6)
     
     def forward(self, xb):
         return torch.sigmoid(self.network(xb))
 
 def get_default_device_and_load(model_path):
+    model = ResNet()
     if torch.cuda.is_available():
         model = torch.load(model_path)
     else:
