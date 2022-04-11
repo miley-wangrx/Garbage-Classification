@@ -49,7 +49,8 @@ def get_default_device_and_load(model_path):
     # else:
     #     model.load_state_dict(torch.load('model_weights.pth'), map_location=torch.device('cpu'))
     device = torch.device('cpu')
-    model.load_state_dict(torch.load('model_weights.pth',map_location='cpu'))
+    model.load_state_dict(torch.load('model_weights1.pth',map_location='cpu'))
+    model.eval()
     #model = torch.load('model01.pt',map_location='cpu')
     return model
 
@@ -76,8 +77,10 @@ def predict_image(img, model, dataset):
     xb = to_device(img.unsqueeze(0), device)
     # Get predictions from model
     yb = model(xb)
+    
     # Pick index with highest probability
     prob, preds  = torch.max(yb, dim=1)
+    print(prob, preds)
     # Retrieve the class label
     #print(dataset.classes[preds[0].item()])
     return dataset.classes[preds[0].item()]
