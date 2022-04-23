@@ -7,3 +7,5 @@
 
 ### Data & Model
 The dataset used in this project was collected from [Kaggle](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification), which contains 6 classifications: cardboard (393), glass (491), metal (400), paper(584), plastic (472) and trash(127).
+
+### Deployment Structure
