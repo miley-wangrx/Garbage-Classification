@@ -14,7 +14,7 @@ The dataset used in this project was collected from [Kaggle](https://www.kaggle.
 ### Requirement
 
 ### Reference
-[1] Garbage Classification Dataset on Kaggle: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification
-[2] Deployment of Machine Learning Application on GKE: https://cloud.google.com/community/tutorials/kubernetes-ml-ops?hl=en
+1. Garbage Classification Dataset on Kaggle: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification 
+2. Deployment of Machine Learning Application on GKE: https://cloud.google.com/community/tutorials/kubernetes-ml-ops?hl=en
 
 
