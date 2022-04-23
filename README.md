@@ -15,6 +15,9 @@ The garbage classification model we used in this model was also from [Kaggle](ht
 
 ### Requirement
 This project is built with Python 3. The following steps can be followed to replicate the analysis:
+* Clone repo with SSH key
+```
+```
 
 ### Reference
 1. Garbage Classification Dataset on Kaggle: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification 
