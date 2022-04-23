@@ -17,6 +17,7 @@ The garbage classification model we used in this model was also from [Kaggle](ht
 This project is built with Python 3. The following steps can be followed to replicate the analysis:
 * Clone repo with SSH key
 ```
+git@github.com:miley-wangrx/Garbage-Classification.git
 ```
 
 ### Reference
