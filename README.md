@@ -6,4 +6,4 @@
 ### Abstract
 
 ### Data & Model
-
+The dataset used in this analysis was collected from [Kaggle](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification).
