@@ -26,6 +26,10 @@ This project is built with Python 3. The following steps can be followed to repl
 ```
 git@github.com:miley-wangrx/Garbage-Classification.git
 ```
+* Install all packages for analysi
+```
+pip install -r requirements.txt
+```
 
 ### Reference
 1. Garbage Classification Dataset on Kaggle: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification 
