@@ -4,7 +4,8 @@
 *Contributors: Ying Feng, Ruoxuan Wang, Jiankai Xu, Zheng Zhang*
 
 ### Abstract
-Garbage classification is an emerging issue in recent years. Letting the robort to automatically perform garbage classification can has significant social and environment effect. Through this project, we built a complete pipeline to perform the complete the garbage classification pipline with machine learning model, feature engineering, model training, and deployment on Google Kubernets Platform. A ResNet50 model performes the best in our hold-out dataset in classifying the type of a garbage, Google Kubernets is used as our model deployment platform. We also built a frontend web service as an interactive platform. 
+Garbage classification is an emerging issue in recent years. As garbage classification during disporsal has been adopted by countries all over the world as a environemntal protection policy, letting the robort to automatically perform garbage classification can has significant social and environment effect, which also leverage manual effort. Through this project, we built a complete pipeline to perform the garbage classification pipline with machine learning model, feature engineering, model training, and model deployment from a simple garbage image. A ResNet50 model performes the best in our hold-out dataset in classifying the type of a garbage, Google Kubernets is used as our model deployment platform. We also built a frontend web service as an interactive platform. 
+
 <img width="550" alt="WechatIMG270" src="https://user-images.githubusercontent.com/90076441/164934578-6302870d-10a6-4652-8289-0f27b92756b5.png">
 <img width="1439" alt="WechatIMG269" src="https://user-images.githubusercontent.com/90076441/164934582-0b907733-cbab-4ef8-9ac3-759e03af60fe.png">
 <img width="1439" alt="WechatIMG268" src="https://user-images.githubusercontent.com/90076441/164934583-d7918b30-911f-4638-801f-57bf125812fa.png">
