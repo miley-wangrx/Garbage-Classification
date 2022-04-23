@@ -17,7 +17,8 @@ The dataset used in this project was collected from [Kaggle](https://www.kaggle.
 The garbage classification model we used in this model was also from [Kaggle](https://www.kaggle.com/code/sudarshansrinivasan/garbage-classify-95-accuracy-scr-p-2), which uses PyTorch, TensorFlow and ResNet50.
 
 ### Deployment Structure
-![IMG_0362 copy](https://user-images.githubusercontent.com/90076441/164925783-9c2056f6-cd60-4c3e-8d36-9f285e51562d.jpg)
+<img width="659" alt="WechatIMG271" src="https://user-images.githubusercontent.com/90076441/164942701-732d01bb-eb24-4f33-a8ce-f5db620b3384.png">
+
 
 ### Requirement
 This project is built with Python 3. The following steps can be followed to replicate the analysis:
