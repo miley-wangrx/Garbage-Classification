@@ -5,4 +5,10 @@ install:
 lint:
 	pylint --disable=R,C,W app.py
 
+build:
+	docker build -t us-west1-docker.pkg.dev/garbage-classfication/garbage-classify-repo/hello-app:v1 .
+
+run:
+	docker run --rm -p 8080:8080 us-west1-docker.pkg.dev/garbage-classfication/garbage-classify-repo/hello-app:v1
+
 all: install lint
