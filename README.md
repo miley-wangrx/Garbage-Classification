@@ -55,7 +55,7 @@ This project is built with Python 3. The following steps can be followed to repl
   ```
   git@github.com:miley-wangrx/Garbage-Classification.git
   ```
-* Install all packages for analysi. 
+* Install all packages for analysis. 
   First, cd into the repo
   ```
   cd Garbage-Classification/
