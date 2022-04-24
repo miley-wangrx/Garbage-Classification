@@ -34,5 +34,7 @@ pip install -r requirements.txt
 ### Reference
 1. Garbage Classification Dataset on Kaggle: https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification 
 2. Deployment of Machine Learning Application on GKE: https://cloud.google.com/community/tutorials/kubernetes-ml-ops?hl=en
-
-
+3. Store Docker container images in Artifact Registry: https://cloud.google.com/artifact-registry/docs/docker/store-docker-container-images?_ga=2.250712257.677951756.1650740441-47603023.1648964420
+4. How to create Artifact Registry repositories: https://cloud.google.com/artifact-registry/docs/repositories/create-repos#overview
+5. Using Container Registry with Google Cloud: https://cloud.google.com/container-registry/docs/using-with-google-cloud-platform?authuser=1
+6. Deploying a containerized web application: https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app#building_the_container_image 
