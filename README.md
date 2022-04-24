@@ -44,21 +44,48 @@ The garbage classification model we used in this model was also from [Kaggle](ht
   
   <img width="900" alt="image" src="https://user-images.githubusercontent.com/88390268/164996943-4aff226a-6f26-4e32-bacc-1b4e7b83cfd7.png">
 
+### Load Test
 
-### Requirement
+
+### Requirements
 
 This project is built with Python 3. The following steps can be followed to replicate the analysis:
 
 * Clone repo with SSH key
-```
-git@github.com:miley-wangrx/Garbage-Classification.git
-```
-* Install all packages for analysi
-```
-pip install -r requirements.txt
-```
-#### Run Locally
+  ```
+  git@github.com:miley-wangrx/Garbage-Classification.git
+  ```
+* Install all packages for analysi. 
+  First, cd into the repo
+  ```
+  cd Garbage-Classification/
+  ```
+* Then run the following command
+  ```
+  make install
+  ```
+  ```
+  python main.py
+  ```
+* The following steps are needed if changes are made:  
 
+  - Build and tag the Docker image:
+    ```
+    docker build -t us-west1-docker.pkg.dev/garbage-classfication/garbage-classify-repo/hello-app:latest .
+    ```
+  - Run Locally:  
+    ```
+    docker run --rm -p 8080:8080 us-west1-docker.pkg.dev/garbage-classfication/garbage-classify-repo/hello-app:latest
+    ```
+  - Pushing the Docker image to Artifact Registry:  
+    First, configure the Docker command-line tool to authenticate to Artifact Registry
+    ```
+    gcloud auth configure-docker us-west1-docker.pkg.dev
+    ```
+    Then, push
+    ```
+    docker push us-west1-docker.pkg.dev/garbage-classfication/garbage-classify-repo/hello-app:latest
+    ```
 
 ### Reference
 1. Garbage Classification Dataset on Kaggle:     
