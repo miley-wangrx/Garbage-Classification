@@ -75,6 +75,7 @@ This project is built with Python 3. The following steps can be followed to repl
     docker run --rm -p 8080:8080 us-west1-docker.pkg.dev/garbage-classfication/garbage-classify-repo/hello-app:latest
     ```
   - Pushing the Docker image to Artifact Registry:  
+    
     First, configure the Docker command-line tool to authenticate to Artifact Registry
     ```
     gcloud auth configure-docker us-west1-docker.pkg.dev
