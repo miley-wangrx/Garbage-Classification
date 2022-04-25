@@ -44,9 +44,6 @@ The garbage classification model we used in this model was also from [Kaggle](ht
   
   <img width="900" alt="image" src="https://user-images.githubusercontent.com/88390268/164996943-4aff226a-6f26-4e32-bacc-1b4e7b83cfd7.png">
 
-### Load Test
-
-
 ### Requirements
 
 This project is built with Python 3. The following steps can be followed to replicate the analysis:
